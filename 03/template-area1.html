@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Grid Template area 1</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container{
+            display: grid;
+            width: 80%;
+            margin: 50px auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+                'header header header'
+                'sidebar sidebar sidebar'
+                'content content content'
+                'footer footer footer'
+            ;
+            gap: 10px;
+        }
+
+        .item{
+            width: 100%;
+            /* background-color: rgb(172, 172, 233); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+            box-sizing: border-box;
+        }
+
+        /* .item:nth-child(even){
+            background-color: pink;
+        } */
+
+        .header{
+            background-color: lightblue;
+            grid-area: header;
+            padding: 70px;
+        }
+
+        .sidebar{
+            background-color: pink;
+            grid-area: sidebar;
+            padding: 5%;
+        }
+
+        .content{
+            background-color: blanchedalmond;
+            grid-area: content;
+            
+        }
+
+        .footer{
+            background-color: lightgrey;
+            grid-area: footer;
+            padding: 50px;
+        }
+
+        /* responsive breakpoint */
+        /* menggunakan media query */
+
+        /* min-width berdasarkan framework css bootstrap */
+        /* ini artinya, apabila di atas 576px, maka gunakan config ini */
+        @media screen and (min-width: 576px) {
+            .container{
+            grid-template-areas: 
+                'header header header'
+                'sidebar content content'
+                'sidebar content content'
+                'footer footer footer'
+            ;
+        }   
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item header">1</div>
+        <div class="item content">2</div>
+        <div class="item sidebar">3</div>
+        <div class="item footer">4</div>
+        <!-- <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div> -->
+    </div>
+</body>
+</html>
