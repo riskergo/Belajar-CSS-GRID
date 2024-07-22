@@ -16,11 +16,18 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr)  repeat(3, 1.5fr);
+            /* auto-fill / auto-fit */
+            /* biasanya di dalam function repeat */
+
+            /* auto-fill, ada kolom tambahan, tidak seperti auto-fit */
+            grid-template-columns: repeat(auto-fill, 100px);
+
+            /* auto-fit, di akhir item*/
+            /* grid-template-columns: repeat(auto-fit, 100px); */
         }
 
         .item {
-            background-color: #bada55;
+            background-color: #dfec29;
             padding: 20px;
             margin: 5px;
             border-radius: 5px;
@@ -43,13 +50,13 @@
         <div class="item">item number 1</div>
         <div class="item">item number 2</div>
         <div class="item">item number 3</div>
-        <div class="item">item number 4</div>
+        <!-- <div class="item">item number 4</div>
         <div class="item">item number 5</div>
         <div class="item">item number 6</div>
         <div class="item">item number 7</div>
         <div class="item">item number 8</div>
         <div class="item">item number 9</div>
-        <div class="item">item number 10</div>
+        <div class="item">item number 10</div> -->
     </div>
 
 
