@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid explicit and implicit</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+
+
+        .container{
+            gap: 2px;
+            width: 600px;
+            margin: 30vh auto;
+            padding: 10px;
+            display: grid;
+
+            /* dapat case mengatur implicit column */
+            /* agak tricky, gunakan beberapa property di bawah ini */
+
+            /* karena menulis seperti ini, defaultnya akan seperti ini juga */
+            /* maka menggunakan grid auto column tidak akan berpengaruh */
+            /* gunakan grid auto flow, mirip seperti flex-direction */
+            grid-template-columns: 50px 20% 15%;
+            grid-template-rows: 20px 20px;  
+            /* grid-auto-flow: row; default */
+            grid-auto-flow: column; 
+            /*item sisanya akan implicit*/
+            /* untuk mengaturnya, gunakan grid auto column */
+            grid-auto-columns: 70px;
+            /* tapi membuat grid menjadi column jarang digunakan*/
+            /* columns-nya akan mengalir ke kanan, tidak akan turun, tapi bisa kita buat turun */
+            /* menggunakan grid template rows */
+
+            /* coba matikan rows */
+            /* grid-template-rows: 100px 200px auto; */
+            
+            /* mengatur dinamis baris/rows gunakan grid auto rows */
+            /* gunakan auto rows/column */
+            /* di sini menggunakan auto rows untuk keadaan baris */
+            /* grid-auto-rows: 200px; */
+
+            
+
+            
+        }
+
+        .item{
+            background-color: rgb(231, 118, 235);
+            color: white;
+            font-size: 18pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .item:nth-child(odd){
+            background-color: rgb(109, 109, 243);
+        }
+
+        .item.item:nth-child(4n){
+            background-color: rgb(252, 80, 80);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+    </div>
+</body>
+</html>

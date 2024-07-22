@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Values</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+
+
+        .container{
+            width: 60%;
+            margin: 30vh auto;
+            display: grid;
+            /* satuan fr digunakan untuk responsive web, sangat disarankan */
+            grid-template-columns: repeat(12, 1fr);
+            gap: 3px;
+        }
+
+        .item{
+            background-color: rgb(231, 118, 235);
+            color: white;
+            font-size: 18pt;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .item:nth-child(odd){
+            background-color: rgb(109, 109, 243);
+        }
+
+        .item.item:nth-child(4n){
+            background-color: rgb(252, 80, 80);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+    <style>
+
+        html{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: Georgia;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .container{
+            width: 800px;
+            border: 3px solid black;
+            margin: 50px auto;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        
+
+        header{
+            background-color: rebeccapurple;
+            padding: 20px 0;
+            line-height: 130px;
+        }
+
+        /* .content{
+            border: 4px solid red;
+        } */
+
+        .content::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        footer{
+            background-color: rgb(89, 110, 110);
+            padding: 15px 0;
+        }
+
+        .sidebar{
+            float: left;
+            width: 40%;
+        }
+
+
+        .sidebar aside{
+            background-color: rgb(64, 120, 224);
+            padding: 60px 0;
+        }
+
+        .sidebar nav{
+            background-color: tomato;
+            padding: 100px 0;
+        }
+
+        main{
+            background-color: rgba(201, 157, 103, 0.842);
+            width: 60%;
+            padding: 171.5px;
+            box-sizing: border-box;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <header>Welcome Traveler</header>
+
+        <div class="content">
+
+            <div class="sidebar">
+                <aside>Weapons</aside>
+                <nav>Spells</nav>
+            </div>
+
+            <main>Walkthrough</main>
+            
+        </div>
+
+        <footer>Enjoy, Traveler</footer>
+
+    </div>
+
+</body>
+</html>
