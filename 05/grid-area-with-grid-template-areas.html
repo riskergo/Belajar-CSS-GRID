@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area with template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        .container {
+            display: grid;
+            margin: 50px auto;
+            width: 80%;
+            /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px); */
+
+            /* with names */
+            grid-template-columns: [satu] minmax(200px, 300px)[dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4];
+
+            grid-template-areas: 
+                'header header header'
+                'sidebar content content'
+                'footer footer footer'
+            ;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .i1 {
+            grid-area: header;
+            background-color: lightblue;
+        }
+
+        .i2 {
+            grid-area: sidebar;
+            background-color: pink;
+        }
+
+        .i3 {
+            grid-area: content;
+            background-color: lightgreen;
+        }
+
+        .i4 {
+            grid-area: footer;
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item i1">1</div>
+        <div class="item i2">2</div>
+        <div class="item i3">3</div>
+        <div class="item i4">4</div>
+        <!-- <div class="items i5">5</div>
+        <div class="items i6">6</div> -->
+        <!-- <div class="items i7">7</div>
+        <div class="items i8">8</div>
+        <div class="items i9">9</div> -->
+    </div>
+</body>
+</html>
