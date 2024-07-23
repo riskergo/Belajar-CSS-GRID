@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Row / Column start and end</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+
+        .container{
+            display: grid;
+            margin: 50px auto;
+            width: 80%;
+            /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px); */
+
+            /* with names */
+            grid-template-columns: [satu] minmax(200px, 300px)[dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4];
+
+        }
+
+        .items{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .i1{
+            background-color: pink;
+            
+
+            /* grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4; */
+
+            /* grid-column-start: 1;
+            grid-column-end: span 3;
+            grid-row-start: 1;
+            grid-row-end: span 2; */
+
+            /* grid-column-start: satu;
+            grid-column-end: empat;
+            grid-row-start: baris1;
+            grid-row-end: b4; */
+            
+            grid-column-start: -1;
+            grid-column-end: -2;
+            grid-row-start: -3;
+            grid-row-end: -4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items i1">1</div>
+        <div class="items i2">2</div>
+        <div class="items i3">3</div>
+        <div class="items i4">4</div>
+        <div class="items i5">5</div>
+        <div class="items i6">6</div>
+        <!-- <div class="items i7">7</div>
+        <div class="items i8">8</div>
+        <div class="items i9">9</div> -->
+    </div>
+</body>
+</html>
