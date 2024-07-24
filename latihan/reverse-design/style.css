@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18pt;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+        'header header header header' 
+        's1 content sidebar s2'
+    ;
+    background-color: black;
+    grid-template-columns: 0.25fr 0.8fr 0.4fr 0.25fr;
+}
+
+
+/* Navigation Bar */
+.header{
+    grid-area: header;
+    background-color: red;
+}
+
+.header ul{
+    background-color: rgb(68, 156, 106);
+    display: grid;
+    grid-template-columns: 0.5fr repeat(5, 0.3fr) 1.5fr repeat(3, 0.12fr) 0.5fr ;
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    /* gap: 10px; */
+}
+
+.header ul li{
+    list-style: none;
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header li button{
+    width: 200px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/* sections */
+section .s1{
+    margin: 30px 10px 0 10px;
+    grid-area: s1;
+    /* background-color: red; */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section .s1 ul li{
+    list-style: none;
+    /* margin-bottom: 10px; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section .s1 ul li a div{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(235, 220, 220);
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+section .s1 ul li a{
+    grid-area: dua;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+section .content {
+    grid-area: content;
+    background-color: darkgrey;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+section .content h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+section span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+section span p{
+    margin-left: 10px;
+}
+
+section span input[type="date"]{
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+section .content span div{
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+section .content .text{
+    margin-top: 20px;
+}
+
+section .sidebar{
+    grid-area: sidebar;
+    background-color: darkgrey;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+section .sidebar-title{
+    display: flex;
+}
+
+section .sidebar-2{
+    grid-area: sidebar;
+    background-color: darkgrey;
+    /* padding: 30px; */
+    margin: 400px 20px 20px 20px;
+    border-radius: 15px;
+}
+
+section .sidebar-2 .sidebar-title{
+    display: flex;
+}
+
+section .sidebar-logo {
+    display: inline;
+    background-color: red;
+    width: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2px;
+    font-size: 26pt;
+}
+
+section .title {
+    margin-left: 10px;
+    font-size: 24pt;
+}
+
+section .sidebar-2 .sidebar-logo{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+section .sidebar-2 .title{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+section .sidebar-content pre{
+    font-size: 0.9em;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section .sidebar-2 .sidebar-content p{
+    padding: 30px;
+    /* text-align: justify; */
+}
+
+section .sidebar-2 .sidebar-content a{
+    text-decoration: none;
+    color: black;
+}
+
+section .sidebar .btn{
+   display: flex;
+   justify-content: center;
+}
+
+section .sidebar .btn button{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 30px;
+ }
+
+
